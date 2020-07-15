@@ -1,0 +1,25 @@
+<div layout="column" ng-controller="DataController">
+
+<table>
+    <thead>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Assigned by</th>
+        <th>Assigned to</th>
+        <th>Status</th>
+        <th>Action</th>
+    </thead>
+    <tbody>
+        <tr ng-repeat="item in alldata" align="center">
+            <td>{{item.due_date}}</td>
+            <td>{{item.description}}</td>
+            <td>{{item.assigned_by}}</td>
+            <td>{{item.assigned_to}}</td>
+            <td>{{item.status}}</td>
+            <td><md-icon style="cursor: pointer;margin-right: 10px" ng-click="edit(item.no)">edit</md-icon><md-icon style="cursor: pointer" ng-click="delete(item.no)">delete</md-icon></td>
+        </tr>
+    </tbody>
+</table>
+
+
+</div>

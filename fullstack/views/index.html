@@ -1,0 +1,44 @@
+
+<div layout="column" flex ng-controller="mainController">
+
+    <md-card layout="column">
+        <md-card-content layout="column">
+            <md-tabs md-center-tabs md-dynamic-height>
+      <md-tab label="Manager Login">
+        <md-content class="md-padding" layout="column" layout-align="center center">
+            <md-input-container>
+        <label>User ID</label>
+        <input ng-model="muserid">
+      </md-input-container>
+
+            <md-input-container>
+        <label>Password</label>
+        <input ng-model="mpassword" ng-disabled="!muserid">
+      </md-input-container>
+
+            <md-button class="md-raised md-primary" ng-click="submit()" ng-disabled="!mpassword">Submit</md-button>
+
+        </md-content>
+      </md-tab>
+      <md-tab label="Employee Login">
+        <md-content class="md-padding" layout="column" layout-align="center center">
+            <md-input-container>
+        <label>User ID</label>
+        <input ng-model="muserid">
+      </md-input-container>
+
+            <md-input-container>
+        <label>Password</label>
+        <input ng-model="mpassword" ng-disabled="!muserid">
+      </md-input-container>
+
+            <md-button class="md-raised md-primary" ng-click="submit()" ng-disabled="!mpassword">Submit</md-button>            
+            
+        </md-content>
+      </md-tab>
+    </md-tabs>
+
+        </md-card-content>
+    </md-card>
+
+</div>

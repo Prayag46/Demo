@@ -1,0 +1,36 @@
+<div layout="column" ng-controller="EditController">
+
+    <md-card layout="column">
+        <md-card-content layout="column" layout-align="center center">
+                        <md-input-container>
+        <label>Date</label>
+        <input ng-model="due_date">
+      </md-input-container>
+
+                        <md-input-container>
+        <label>Description</label>
+        <input ng-model="description">
+      </md-input-container>
+            
+                        <md-input-container>
+        <label>Assigned to</label>
+        <input ng-model="assignedto">
+      </md-input-container>
+            
+                        <md-input-container>
+        <label>Assigned by</label>
+        <input ng-model="assignedby">
+      </md-input-container>
+
+                        <md-input-container>
+        <label>Status</label>
+        <input ng-model="status">
+      </md-input-container>
+            
+
+            <md-button class="md-raised md-primary" ng-click="saveedit()">Save</md-button>
+            
+        </md-card-content>
+    </md-card>
+    
+</div>
