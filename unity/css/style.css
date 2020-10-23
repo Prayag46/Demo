@@ -1,0 +1,32 @@
+
+.bold {
+    font-weight: bold;
+}
+
+.toolbar {
+    position: fixed;
+    max-height: 50px;
+}
+
+.toolbar-color {
+    background-color: black !important;
+}
+
+.logo {
+    object-fit: contain;
+}
+
+.mob-menu {
+    margin-right: 5px;
+}
+
+.mob-toolbar {
+    color: white;
+    max-height: 50px;
+    background-color: black;
+}
+
+.mob-close {
+    color: white;
+    margin-left: 15px;
+}

@@ -1,0 +1,259 @@
+<style>
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+</style>
+
+
+<div layout="column" flex ng-controller="mainController" style="text-align:left;font-family: cursive">
+    <span style="display: none;">Between all the vast varities of entertainemnt here are some of the best TV series,games and books to try once.Also some Financial Advisory to manage your wealth for a bright and successful future.</span>
+    <md-card layout="column" flex style="border-radius: 5px">
+        <md-card-content layout="column">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div hide-xs class="swiper-slide"><img src="images/gaminghd.jpg" style="height: 500px;width: 100%"></div>
+                    <div hide-gt-xs class="swiper-slide"><img src="images/gaminghd.jpg" style="height: 300px;width: 100%"></div>
+                    <div hide-xs class="swiper-slide"><img src="images/alltvhd2.jpg" style="height: 500px;width: 100%"></div>
+                    <div hide-gt-xs class="swiper-slide"><img src="images/alltvhd2.jpg" style="height: 300px;width: 100%"></div>
+                    <div hide-xs class="swiper-slide"><img src="images/allbooks.jpg" style="height: 500px;width: 100%"></div>
+                    <div hide-gt-xs class="swiper-slide"><img src="images/allbooks.jpg" style="height: 300px;width: 100%"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>                        
+        </md-card-content>
+    </md-card>
+
+    <br/>
+
+    <!--Hot Topics-->
+    <md-card layout="column" flex style="border-radius: 10px">
+        <md-card-header layout="column" layout-align="center center">
+            <strong style="font-size: 30px">Hot Topics</strong>
+        </md-card-header>
+        <md-divider style="margin-left: 40%;margin-right: 40%;background-color: blue"></md-divider>
+        <md-card-content layout="row" layout-xs="column">
+
+            <md-card flex-gt-md="25" flex-gt-xs="100" flex-xs="100" layout="column" class="income-intro income-left-space income-right-space" layout-align="" style="border-radius: 5px">
+                <img ng-src="images/watch1.png" class="md-card-image" alt="Washed Out" style="cursor: pointer" ng-click="goto('/tv')">
+                <md-card-title style="cursor:pointer" ng-click="goto('/tv')">
+                    <md-card-title-text>
+                        <span class="md-headline"><b>Best TV Series to watch</b></span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content layout="column" style="cursor:pointer;font-size: 18px" ng-click="goto('/tv')">
+                    <p>
+                        The ever increasing number of various shows,series,channels, streamlines can make it difficult on which series to start with.Here are some amazing shows according to your favorite genre.
+                        <!--<a href style="color: blue" ng-click="goto('/tv')">Explore..</a>-->
+                    </p>                    
+                </md-card-content>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button class="md-icon-button" aria-label="Read" ng-click="goto('/tv')">
+                        <md-icon>visibility<md-tooltip md-direction="top">Explore</md-tooltip></md-icon>
+                    </md-button>
+                    <md-button class="md-icon-button" aria-label="Share" ng-click="copylink('http://www.bestchoiceasap.com/#!/tv')">
+                        <md-icon>share<md-tooltip md-direction="top">Share</md-tooltip></md-icon>
+                    </md-button>
+                </md-card-actions>
+            </md-card>
+
+            <md-card flex-gt-md="25" flex-gt-xs="100" flex-xs="100" layout="column" class="income-intro income-left-space income-right-space" layout-align="" style="border-radius: 5px">
+                <img ng-src="images/game3.jpg" class="md-card-image" alt="Washed Out" style="cursor: pointer" ng-click="goto('/games')">
+                <md-card-title style="cursor:pointer" ng-click="goto('/games')">
+                    <md-card-title-text>
+                        <span class="md-headline"><b>Gaming at your level</b></span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content layout="column" style="cursor:pointer;font-size: 18px" ng-click="goto('/games')">
+                    <p>
+                        Between tons of games available in the market it can be really difficult to choose one that matches your type and interest.Amongst the most popular ones check which one best fits in your list.
+                        <!--<a href style="color: blue" ng-click="goto('/games')">Explore..</a>-->
+                    </p>                    
+                </md-card-content>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button class="md-icon-button" aria-label="Read" ng-click="goto('/games')">
+                        <md-icon>visibility<md-tooltip md-direction="top">Explore</md-tooltip></md-icon>
+                    </md-button>
+                    <md-button class="md-icon-button" aria-label="Share" ng-click="copylink('http://www.bestchoiceasap.com/#!/games')">
+                        <md-icon>share<md-tooltip md-direction="top">Share</md-tooltip></md-icon>
+                    </md-button>
+                </md-card-actions>
+            </md-card>
+
+            <md-card flex-gt-md="25" flex-gt-xs="100" flex-xs="100" layout="column" class="income-intro income-left-space income-right-space" layout-align="" style="border-radius: 5px">
+                <img ng-src="images/finance.jpg" class="md-card-image" alt="Washed Out" style="cursor: pointer" ng-click="goto('/finance')">
+                <md-card-title style="cursor:pointer" ng-click="goto('/finance')">
+                    <md-card-title-text>
+                        <span class="md-headline"><b>Grow your Finance</b></span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content style="cursor:pointer;font-size: 18px" ng-click="goto('/finance')">
+                    <p>
+                        Lets start managing our money for a better future.Instead of working for money,let your money work for you.Know some methods and strategies to manage your wealth and become financially independent.
+                        <!--<a href style="color: blue" ng-click="">Explore..</a>-->
+                    </p>
+                </md-card-content>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button class="md-icon-button" aria-label="Read" ng-click="goto('/finance')">
+                        <md-icon>visibility<md-tooltip md-direction="top">Explore</md-tooltip></md-icon>
+                    </md-button>
+                    <md-button class="md-icon-button" aria-label="Share" ng-click="copylink('http://www.bestchoiceasap.com/#!/finance')">
+                        <md-icon>share<md-tooltip md-direction="top">Share</md-tooltip></md-icon>
+                    </md-button>
+                </md-card-actions>
+            </md-card>
+
+            <md-card flex-gt-md="25" flex-gt-xs="100" flex-xs="100" layout="column" class="income-intro income-left-space income-right-space" layout-align="" style="border-radius: 5px">
+                <img ng-src="images/readone.jpg" class="md-card-image" alt="Washed Out" style="cursor: pointer" ng-click="goto('/books')">
+                <md-card-title style="cursor: pointer" ng-click="goto('/books')">
+                    <md-card-title-text>
+                        <span class="md-headline"><b>A must Read</b></span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content style="cursor: pointer;font-size: 18px" ng-click="goto('/books')">
+                    <p>
+                        If you don't like to read, you haven't found the right book yet.In all the variant categories and genres here are some of the books which can prove to be a page turner throughout.
+                        <!--<a href style="color: blue" ng-click="">Explore..</a>-->
+                    </p>
+                </md-card-content>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button class="md-icon-button" aria-label="Read" ng-click="goto('/books')">
+                        <md-icon>visibility<md-tooltip md-direction="top">Explore</md-tooltip></md-icon>
+                    </md-button>
+                    <md-button class="md-icon-button" aria-label="Share" ng-click="copylink('http://www.bestchoiceasap.com/#!/books')">
+                        <md-icon>share<md-tooltip md-direction="top">Share</md-tooltip></md-icon>
+                    </md-button>
+                </md-card-actions>
+            </md-card>
+
+        </md-card-content>
+    </md-card>
+    
+    
+    <!--Latest-->
+    <md-card layout="column" flex style="border-radius: 10px">
+        <md-card-header layout="column" layout-align="center center">
+            <strong style="font-size: 30px">Latest</strong>
+        </md-card-header>
+        <md-divider style="margin-left: 40%;margin-right: 40%;background-color: blue"></md-divider>
+        <md-card-content layout="row" layout-xs="column">
+
+            <md-card flex-gt-md="25" flex-gt-xs="100" flex-xs="100" layout="column" class="income-intro income-left-space income-right-space" layout-align="" style="border-radius: 5px">
+                <img ng-src="images/watch1.png" class="md-card-image" alt="Washed Out" style="cursor: pointer" ng-click="goto('/tv')">
+                <md-card-title style="cursor:pointer" ng-click="goto('/tv')">
+                    <md-card-title-text>
+                        <span class="md-headline"><b>AC Odyssey : Choice is yours</b></span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content layout="column" style="cursor:pointer;font-size: 18px" ng-click="goto('/tv')">
+                    <p>
+                        A journey into the best game of Assassins's Creed franchise.
+                        <!--<a href style="color: blue" ng-click="goto('/tv')">Explore..</a>-->
+                    </p>                    
+                </md-card-content>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button class="md-icon-button" aria-label="Read" ng-click="goto('/tv')">
+                        <md-icon>visibility<md-tooltip md-direction="top">Explore</md-tooltip></md-icon>
+                    </md-button>
+                    <md-button class="md-icon-button" aria-label="Share" ng-click="copylink('http://www.bestchoiceasap.com/#!/tv')">
+                        <md-icon>share<md-tooltip md-direction="top">Share</md-tooltip></md-icon>
+                    </md-button>
+                </md-card-actions>
+            </md-card>
+
+            <md-card flex-gt-md="25" flex-gt-xs="100" flex-xs="100" layout="column" class="income-intro income-left-space income-right-space" layout-align="" style="border-radius: 5px">
+                <img ng-src="images/game3.jpg" class="md-card-image" alt="Washed Out" style="cursor: pointer" ng-click="goto('/games')">
+                <md-card-title style="cursor:pointer" ng-click="goto('/games')">
+                    <md-card-title-text>
+                        <span class="md-headline"><b>Best phones for your pocket</b></span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content layout="column" style="cursor:pointer;font-size: 18px" ng-click="goto('/games')">
+                    <p>
+                        Pick the best according to your lifestyle and budget.
+                        <!--<a href style="color: blue" ng-click="goto('/games')">Explore..</a>-->
+                    </p>                    
+                </md-card-content>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button class="md-icon-button" aria-label="Read" ng-click="goto('/games')">
+                        <md-icon>visibility<md-tooltip md-direction="top">Explore</md-tooltip></md-icon>
+                    </md-button>
+                    <md-button class="md-icon-button" aria-label="Share" ng-click="copylink('http://www.bestchoiceasap.com/#!/games')">
+                        <md-icon>share<md-tooltip md-direction="top">Share</md-tooltip></md-icon>
+                    </md-button>
+                </md-card-actions>
+            </md-card>
+
+            <md-card flex-gt-md="25" flex-gt-xs="100" flex-xs="100" layout="column" class="income-intro income-left-space income-right-space" layout-align="" style="border-radius: 5px">
+                <img ng-src="images/finance.jpg" class="md-card-image" alt="Washed Out" style="cursor: pointer" ng-click="goto('/finance')">
+                <md-card-title style="cursor:pointer" ng-click="goto('/finance')">
+                    <md-card-title-text>
+                        <span class="md-headline"><b>Technologies at its best</b></span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content style="cursor:pointer;font-size: 18px" ng-click="goto('/finance')">
+                    <p>
+                        The surviving and most reliable technologies ever. 
+                        <!--<a href style="color: blue" ng-click="">Explore..</a>-->
+                    </p>
+                </md-card-content>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button class="md-icon-button" aria-label="Read" ng-click="goto('/finance')">
+                        <md-icon>visibility<md-tooltip md-direction="top">Explore</md-tooltip></md-icon>
+                    </md-button>
+                    <md-button class="md-icon-button" aria-label="Share" ng-click="copylink('http://www.bestchoiceasap.com/#!/finance')">
+                        <md-icon>share<md-tooltip md-direction="top">Share</md-tooltip></md-icon>
+                    </md-button>
+                </md-card-actions>
+            </md-card>
+
+            <md-card flex-gt-md="25" flex-gt-xs="100" flex-xs="100" layout="column" class="income-intro income-left-space income-right-space" layout-align="" style="border-radius: 5px">
+                <img ng-src="images/readone.jpg" class="md-card-image" alt="Washed Out" style="cursor: pointer" ng-click="goto('/books')">
+                <md-card-title style="cursor: pointer" ng-click="goto('/books')">
+                    <md-card-title-text>
+                        <span class="md-headline"><b>A team to go</b></span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content style="cursor: pointer;font-size: 18px" ng-click="goto('/books')">
+                    <p>
+                        Some of the most interesting and competitive multiplayer games.
+                        <!--<a href style="color: blue" ng-click="">Explore..</a>-->
+                    </p>
+                </md-card-content>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button class="md-icon-button" aria-label="Read" ng-click="goto('/books')">
+                        <md-icon>visibility<md-tooltip md-direction="top">Explore</md-tooltip></md-icon>
+                    </md-button>
+                    <md-button class="md-icon-button" aria-label="Share" ng-click="copylink('http://www.bestchoiceasap.com/#!/books')">
+                        <md-icon>share<md-tooltip md-direction="top">Share</md-tooltip></md-icon>
+                    </md-button>
+                </md-card-actions>
+            </md-card>
+
+        </md-card-content>
+    </md-card>
+    
+    
+    
+
+</div>

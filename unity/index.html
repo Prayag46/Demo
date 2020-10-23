@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unity</title>
+  <meta name="description"
+    content="Between all the vast varities of entertainemnt here are some of the best TV series,games and books to try once.Also some Financial Advisory to manage your wealth for a bright and successful future.">
+  <link rel="icon" type="image/png" href="images/symbol.png" />
+  <link rel="stylesheet" href="css/angular-material.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script type="text/javascript" src="scripts/angular.min.js"></script>
+  <script type="text/javascript" src="scripts/angular-material.min.js"></script>
+  <script type="text/javascript" src="scripts/angular-animate.min.js"></script>
+  <script type="text/javascript" src="scripts/angular-aria.min.js"></script>
+  <script type="text/javascript" src="scripts/angular-messages.min.js"></script>
+  <script type="text/javascript" src="scripts/angular-route.min.js"></script>
+  <script type="text/javascript" src="scripts/angular-touch.min.js"></script>
+  <script type="text/javascript" src="scripts/blog.js"></script>
+  <script type="text/javascript" src="scripts/swiper.min.js"></script>
+</head>
+
+<body ng-app="MainApp" ng-controller="mainController" ng-cloak style="background-image: url('images/sim2.jpg');background-repeat: no-repeat;height: 100vh;">
+
+  <!-- Users -->
+  <div align="center">
+    <md-content ng-hide="UserIn" style="width: 500px;border: 1px solid orange;border-radius: 5px">
+      <md-tabs md-center-tabs md-dynamic-height>
+        <md-tab label="Existing User">
+          <md-content class="md-padding">
+            <br><br>
+            <div align="center">
+              <strong>Select User :</strong>
+              <md-select ng-model="User" style="width: 20%;">
+                <md-option ng-repeat="item in items" ng-value="item">{{item}}</md-option>
+              </md-select>
+              <br>
+              <md-button class="md-raised md-primary" ng-click="Submit()">Start</md-button>
+            </div>
+          </md-content>
+        </md-tab>
+
+        <md-tab label="New User">
+          <md-content layout="column" class="md-padding">
+            <div align="center">
+              <strong>Enter Username :</strong><br>
+              <md-input-container>
+                <input ng-model="User">
+              </md-input-container>
+              <br>
+              <md-button class="md-raised md-primary" ng-click="Submit()">Start</md-button>
+            </div>
+          </md-content>
+        </md-tab>
+      </md-tabs>
+    </md-content>
+  </div>
+
+  <!-- User Page -->
+  <div ng-show="UserIn">
+    <br>
+    <h1 style="margin-left: 2%;color: white;">WELCOME {{UserName}}</h1>
+
+    <div align="center">
+      <h2 style="color: white;">Make your choices</h2>
+      
+      <div layout="row" layout-xs="column" layout-align="center center">
+        <br>
+        <md-card flex-gt-md="25" flex-gt-xs="100" flex-xs="100" layout="column" class="">
+          <md-card-header layout-align="center center">
+            <md-card-avatar>
+              <img src="images/time.jpg" alt="Time" />
+            </md-card-avatar>
+            <md-card-header-text>
+              <strong style="font-size: 20px;">Time of the Day</strong>
+            </md-card-header-text>
+          </md-card-header>
+          <img ng-src={{timeimg}} class="md-card-image" alt="Time" style="height: 250px;">
+          <md-card-title>
+            <md-card-content layout="column">
+              <md-radio-group class="md-primary" ng-model="time" ng-change="timechange()" aria-labelledby="Time">
+                <md-radio-button value="morning">Morning <md-icon style="color:orange;">brightness_5</md-icon>
+                </md-radio-button>
+                <md-radio-button value="afternoon">Afternoon <md-icon style="color: yellow;">wb_sunny</md-icon>
+                </md-radio-button>
+                <md-radio-button value="evening">Evening <md-icon style="color: orangered;">brightness_4</md-icon>
+                </md-radio-button>
+                <md-radio-button value="night">Night <md-icon style="color: black;">bedtime</md-icon>
+                </md-radio-button>
+              </md-radio-group>
+            </md-card-content>
+        </md-card>
+
+
+        <md-card flex-gt-md="25" flex-gt-xs="100" flex-xs="100" layout="column" class="">
+          <md-card-header layout-align="center center">
+            <md-card-avatar>
+              <img src="images/weather.jpg" alt="Weather" />
+            </md-card-avatar>
+            <md-card-header-text>
+              <strong style="font-size: 20px;">Weather</strong>
+            </md-card-header-text>
+          </md-card-header>
+          <img ng-src={{weatherimg}} class="md-card-image" alt="Weather" style="height: 250px;">
+          <md-card-title>
+            <md-card-content layout="column">
+              <md-radio-group class="md-primary" ng-model="weather" aria-labelledby="Weather"
+                ng-change="weatherchange()">
+                <md-radio-button value="clear">Clear <md-icon style="color: green;">local_florist</md-icon>
+                </md-radio-button>
+                <md-radio-button value="rainy">Rainy <md-icon style="color: black;">cloud</md-icon>
+                </md-radio-button>
+                <md-radio-button value="foggy">Foggy <md-icon style="color: brown;">multiline_chart</md-icon>
+                </md-radio-button>
+                <md-radio-button value="snow">Snow <md-icon>ac_unit</md-icon>
+                </md-radio-button>
+              </md-radio-group>
+            </md-card-content>
+        </md-card>
+
+
+        <md-card flex-gt-md="25" flex-gt-xs="100" flex-xs="100" layout="column" class="">
+          <md-card-header layout-align="center center">
+            <md-card-avatar>
+              <img src="images/traffic.jpg" alt="Traffic" />
+            </md-card-avatar>
+            <md-card-header-text>
+              <strong style="font-size: 20px;">Traffic Status</strong>
+            </md-card-header-text>
+          </md-card-header>
+          <img ng-src={{trafficimg}} class="md-card-image" alt="Traffic" style="height: 250px;">
+          <md-card-title>
+            <md-card-content layout="column">
+              <md-radio-group class="md-primary" ng-model="traffic" aria-labelledby="Traffic"
+                ng-change="trafficchange()">
+                <md-radio-button value="low">Low <md-icon style="color:green">speed</md-icon>
+                </md-radio-button>
+                <md-radio-button value="medium">Medium <md-icon style="color: orange;">av_timer</md-icon>
+                </md-radio-button>
+                <md-radio-button value="high">High <md-icon style="color: red;">slow_motion_video</md-icon>
+                </md-radio-button>
+                <br><br>
+              </md-radio-group>
+            </md-card-content>
+        </md-card>
+
+      </div>
+
+      <md-button class="md-raised md-primary">Start</md-button>
+
+    </div>
+
+  </div>
+
+
+
+
+</body>
+
+</html>
